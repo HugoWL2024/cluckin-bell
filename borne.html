@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cluckin' Bell : commander</title>
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('cb-theme');
+        if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="kiosk">
+  <div class="head"><h1>CLUCKIN' BELL</h1></div>
+  <main class="body" id="screen"></main>
+  <script type="module" src="kiosk.js"></script>
+</body>
+</html>
